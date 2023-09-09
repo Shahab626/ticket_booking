@@ -24,6 +24,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import CustomIcon from './src/components/CustomIcon';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -72,13 +73,15 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+        <CustomIcon name="search" size={25} />
+        <CustomIcon name="ticket" size={25} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
-            screen and then c
+            screen and stop.
           </Section>
           <Section title="See Your Changes">
             <ReloadInstructions />
